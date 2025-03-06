@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Codebeautify.org Text to HTML Converter</title>
+	</head>
+	<body>
+		<p>const express = require('express'); 
+const app = express(); 
+app.use(express.json()); 
+ 
+app.post('/predict', (req, res) => { 
+    const colors = ['red', 'green', 'blue']; 
+    const randomColor = colors[Math.floor(Math.random() * colors.length)]; 
+    const userPrediction = req.body.color; 
+ 
+    if (userPrediction === randomColor) { 
+        res.json({ result: 'You won!' }); 
+    } else { 
+        res.json({ result: 'You lost. Try again!' }); 
+    } 
+}); 
+ 
+app.listen(3000, () => console.log('Server running on port 3000'));</p>
+	</body>
+</html>
